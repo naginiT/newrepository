@@ -19,8 +19,8 @@ public	static XSSFSheet xs;
     	XSSFWorkbook wb=new XSSFWorkbook(fs);
 		 xs=wb.getSheet(sheetname);
 		XSSFCell xc=xs.getRow(row).getCell(column);
-	    String s=	xc.getStringCellValue();
-    	return s;
+	    String t=	xc.getStringCellValue();
+    	return t;
     }
 	
 }
