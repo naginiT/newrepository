@@ -9,7 +9,7 @@ public class Browser
 	public static WebDriver driver;
 	public static void brosercode()
 	{
-		System.setProperty("webdriver.chrome.driver", "H:\\app selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Harish\\chromedriver.exe");
 		 driver=new ChromeDriver();
 	}
 	public static void fbappInvoke()

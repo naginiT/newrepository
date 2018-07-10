@@ -6,18 +6,20 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.testng.annotations.Test;
 
 
-public class ExecutionCode extends excelretrivecode{
-	
-public 	XSSFSheet xs=super.xs;
-
+public class ExecutionCode extends excelretrivecode
+{
+		 
 
 @Test
 public  void m1() throws IOException 
 	{
-
-	for(int i=0;i<=this.xs.getLastRowNum();i++)
+	
+	XSSFSheet xs = excelretrivecode.excelcode("C:\\Users\\cubic\\git\\newrepository\\KeyWordDrivenPro\\keyword.xlsx", "Sheet1");
+    //OR
+	//XSSFSheet xs =super.excelcode("C:\\Users\\cubic\\git\\newrepository\\KeyWordDrivenPro\\keyword.xlsx", "Sheet1");
+	for(int i=0;i<=xs.getLastRowNum();i++)
 	{
-        String st=	excelretrivecode.excelcode("C:\\Users\\NSSS KKISHORE\\Desktop\\fbkeyword.xlsx", "Sheet1", i, 0);
+		String st =excelretrivecode.value(i, 0);
 		if (st.equalsIgnoreCase("brosercode"))
 		{
 			Browser.brosercode();
